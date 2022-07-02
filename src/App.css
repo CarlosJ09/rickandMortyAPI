@@ -27,12 +27,18 @@
      border-radius: 50%;
     background:darkgrey;
 }
-/* .up {
-    display: block;
-    width: 3rem;
-     height: 3rem;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     border-radius: 50%;
-     background: #5cb85c;
-} */
+
+.cards {
+    width: 23rem;
+}
+
+@media (max-width: 460px) {
+    .cards {
+        width: 20rem;
+    }
+    .imagee{
+        width: 14rem !important;
+        height: 14rem !important;
+    }
+}
+

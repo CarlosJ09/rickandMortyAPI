@@ -48,25 +48,25 @@ function Characters() {
 
   return (
     <div>
-      <div className="flex items-center justify-between my-6 text-gray-50 font-bold">
+      {<div className="flex min-w-auto items-center justify-between my-6 text-gray-50 font-bold">
         <Prev page={page} setPage={setPage} />
         <span>Page: {page}</span>
         <Next page={page} setPage={setPage} />
-      </div>
+      </div>}
       <div className="flex flex-wrap justify-center text-gray-50 text-center">
         {character.map((character) => {
           return (
             <div
               key={character.id}
-              className="flex flex-col m-4 bg-slate-900 w-96 rounded-lg justify-center items-center shadow-sm shadow-black"
+              className="cards flex flex-wrap flex-col m-4 bg-slate-900 rounded-lg justify-center break-all items-center shadow-sm shadow-black h-auto"
             >
               <h2 className="mt-3 text-2xl font-bold">{character.name}</h2>
               <img
-                className="bg-cover bg-center rounded-full m-6 w-72 h-72"
+                className="imagee bg-cover bg-center rounded-full m-6 w-72 h-72"
                 src={character.image}
                 alt={character.name}
               />
-              <div className="p-2 text-lg">
+              <div className="text p-2 text-lg">
                 <p>Last Known location: {character.location.name}</p>
                 <div className="flex justify-center items-center">
                   <span
@@ -87,7 +87,7 @@ function Characters() {
           );
         })}
       </div>
-      <div className="flex items-center justify-between my-16 text-gray-50 font-bold">
+      <div className="flex min-w-auto items-center justify-between my-16 text-gray-50 font-bold">
           <Prev page={page} setPage={setPage} />
           <span>Page: {page}</span>
           <Next page={page} setPage={setPage} />
@@ -96,4 +96,4 @@ function Characters() {
   );
 }
 
-export default Characters
+export { Characters }
