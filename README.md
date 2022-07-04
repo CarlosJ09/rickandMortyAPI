@@ -6,9 +6,7 @@ In the project directory, you must run:
 
 ### `npm i`
 
-Install all the packages.\
-
-then
+This install all the packages.
 
 ### `npm run dev`
 
